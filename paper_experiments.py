@@ -63,7 +63,7 @@ def objective_function_a(internal_dynamics):
     p2_data = {}
 
     # create an environment
-    env = environment_3dof()
+    env = environment_3dof(constraints=False)
     # for mu in [1e-5, 1e-4, 1e-3, 1e-2]:
     powers = [-5, -4, -3, -2]
     for power in powers:
@@ -121,7 +121,7 @@ def objective_function_b(internal_dynamics):
     error_data = {}
 
     # create an environment
-    env = environment_3dof()
+    env = environment_3dof(constraints=False)
 
     for N in [100, 30, 10, 2]:
         controller = vanilla_mpc_controller.generate_controller(
@@ -177,7 +177,7 @@ def objective_function_c(internal_dynamics, with_constraints):
     error_data = {}
 
     # create an environment
-    env = environment_3dof()
+    env = environment_3dof(constraints=with_constraints)
 
     for N in [100, 30, 10, 2]:
         controller = decay_based_mpc.generate_controller(

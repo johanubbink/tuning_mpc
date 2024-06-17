@@ -6,7 +6,7 @@ import casadi as ca
 
 class environment_3dof:
 
-    def __init__(self) -> None:
+    def __init__(self, constraints = False) -> None:
         self.num_dof = 3
 
         # creates the forward kinematics
@@ -17,11 +17,13 @@ class environment_3dof:
         self.dq0 = np.array([0.0, 0.0, 0.0])
         self.t0 = np.array([0.0])
 
-        self.q_upper = ca.MX([1, np.pi+0.01,np.pi + 0.01])
         self.q_lower = ca.MX([-1, -np.pi-0.01, -np.pi - 0.01])
+        self.q_upper = ca.MX([1, np.pi+0.01,np.pi + 0.01])
 
         self.dq_lim = 0.5
         self.ddq_lim = 1.5
+
+        self.constraints = constraints
 
 
     def _forward_kin_factory(self,L1 = 1, L2=1) -> ca.Function:
@@ -86,7 +88,10 @@ class environment_3dof:
 
         fig, ax = plt.subplots()
 
-        link0, = ax.plot([-1,1],[0,0])
+        if self.constraints:
+            link0, = ax.plot([self.q_lower[0],self.q_upper[0]],[0,0])
+        else:
+            link0, = ax.plot([-2,2],[0,0])
         link1, = ax.plot([p0[0], p1[0]], [p0[1], p1[1]], 'r-', linewidth=2)
         link2, = ax.plot([p1[0], p2[0]], [p1[1], p2[1]], 'b-', linewidth=2)
         target_point, = ax.plot([target[0]], [target[1]],"go")  # green circle for target

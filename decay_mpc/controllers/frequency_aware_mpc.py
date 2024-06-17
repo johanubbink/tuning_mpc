@@ -175,7 +175,6 @@ if __name__ == "__main__":
 
     # fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(8, 6))
 
-    plt.rcParams["text.usetex"] = True
     plt.rcParams["font.family"] = "serif"
     plt.rcParams['font.size'] = 12
     plt.rcParams['xtick.labelsize'] = 10
@@ -194,7 +193,7 @@ if __name__ == "__main__":
     os.makedirs(save_dir, exist_ok=True)
     save_path = os.path.join(
         save_dir, "objective_frequency_aware_dynamics.pdf")
-    # plt.savefig(save_path, bbox_inches='tight', pad_inches=0)
+    plt.savefig(save_path, bbox_inches='tight', pad_inches=0)
     plt.show()
 
     # ts = 0.01
