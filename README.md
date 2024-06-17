@@ -22,10 +22,12 @@ $$
 For this obejective function, the weighting matrices are chosen as $\mathbf{Q} = \mathbf{I}$ and $\mathbf{R} = \mu \mathbf{I}$, where $\mathbf{I}$ is an identity matrix and $\mu$ adjusts the level of regularisation. The resulting closed-loop performance for a horizon length of 50 and different values of $\mu$ is visualised below:
 
 <div align="center">
-    <img src="readme_figures/objective_a_mu_-2_perfect.gif" style="max-width: 40%;">
-    <img src="readme_figures/objective_a_mu_-3_perfect.gif" style="max-width: 40%;">
-    <img src="readme_figures/objective_a_mu_-4_perfect.gif" style="max-width: 40%;">
-    <img src="readme_figures/objective_a_mu_-5_perfect.gif" style="max-width: 40%;">
+    <img src="readme_figures/objective_a_mu_-2_perfect.gif" style="max-width: 20%;">
+    <img src="readme_figures/objective_a_mu_-3_perfect.gif" style="max-width: 20%;">
+</div>
+<div align="center">
+    <img src="readme_figures/objective_a_mu_-4_perfect.gif" style="max-width: 20%;">
+    <img src="readme_figures/objective_a_mu_-5_perfect.gif" style="max-width: 20%;">
 </div>
 
 Clearly, for smaller values of $\mu$, the performance improves. This can be seen in quantitatively in the following graph:
