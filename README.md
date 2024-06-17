@@ -12,6 +12,20 @@
 
 ### Objective function B
 
+$$
+l^\text{B} (\mathbf{x}_k,\mathbf{u}_k)
+=
+\begin{bmatrix} 
+    {\mathbf{e}}(\mathbf{x}_k) \\ \dot{\mathbf{e}}(\mathbf{x}_k)
+\end{bmatrix}^\intercal
+\mathbf{Q}^\text{B}
+\begin{bmatrix} 
+    {\mathbf{e}}(\mathbf{x}_k) \\ \dot{\mathbf{e}}(\mathbf{x}_k)
+\end{bmatrix}
++ \mathbf{u}_k^\intercal \mathbf{R} \mathbf{u}_k.
+$$
+
+
 
 ### Objective function C - Proposed approach
 
