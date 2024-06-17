@@ -34,12 +34,11 @@ Clearly, for smaller values of $\mu$, the performance improves. This can be seen
     <img src="readme_figures/objective_a_perfect.svg" style="max-width: 40%;">
 </div>
 
-
 <div align="center">
-    <img src="readme_figures/objective_a_mu_-2_with_dynamics.gif" style="max-width: 40%;">
-    <img src="readme_figures/objective_a_mu_-3_with_dynamics.gif" style="max-width: 40%;">
-    <img src="readme_figures/objective_a_mu_-4_with_dynamics.gif" style="max-width: 40%;">
-    <img src="readme_figures/objective_a_mu_-5_with_dynamics.gif" style="max-width: 40%;">
+    <img src="readme_figures/objective_a_mu_-2_with_dynamics.gif" width="40%">
+    <img src="readme_figures/objective_a_mu_-3_with_dynamics.gif" width="40%">
+    <img src="readme_figures/objective_a_mu_-4_with_dynamics.gif" width="40%">
+    <img src="readme_figures/objective_a_mu_-5_with_dynamics.gif" width="40%">
 </div>
 
 <div align="center">
@@ -62,6 +61,13 @@ l^\text{B} (\mathbf{x}_k,\mathbf{u}_k)
 $$
 
 <div align="center">
+    <img src="readme_figures/objective_b_N_2_with_dynamics.gif" width="40%">
+    <img src="readme_figures/objective_b_N_10_with_dynamics.gif" width="40%">
+    <img src="readme_figures/objective_b_N_30_with_dynamics.gif" width="40%">
+    <img src="readme_figures/objective_b_N_100_with_dynamics.gif" width="40%">
+</div>
+
+<div align="center">
     <img src="readme_figures/objective_b_with_dynamics.svg" style="max-width: 40%;">
 </div>
 
@@ -75,10 +81,24 @@ l^\text{c}(\mathbf{x}_k,\mathbf{u}_k) = {\boldsymbol{\varepsilon}}(\mathbf{x}_k,
 $$
 
 <div align="center">
+    <img src="readme_figures/objective_c_N_2_with_dynamics.gif" width="40%">
+    <img src="readme_figures/objective_c_N_10_with_dynamics.gif" width="40%">
+    <img src="readme_figures/objective_c_N_30_with_dynamics.gif" width="40%">
+    <img src="readme_figures/objective_c_N_100_with_dynamics.gif" width="40%">
+</div>
+
+<div align="center">
     <img src="readme_figures/objective_c_with_dynamics_no_constraints.svg" style="max-width: 40%;">
 </div>
 
 ### Objective function C - With constraints
+
+<div align="center">
+    <img src="readme_figures/objective_c_N_2_with_dynamics_with_constraints.gif" width="40%">
+    <img src="readme_figures/objective_c_N_10_with_dynamics_with_constraints.gif" width="40%">
+    <img src="readme_figures/objective_c_N_30_with_dynamics_with_constraints.gif" width="40%">
+    <img src="readme_figures/objective_c_N_100_with_dynamics_with_constraints.gif" width="40%">
+</div>
 
 <div align="center">
     <img src="readme_figures/objective_c_with_dynamics_with_constraints.svg" style="max-width: 40%;">
