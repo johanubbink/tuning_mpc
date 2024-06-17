@@ -17,8 +17,8 @@ class environment_3dof:
         self.dq0 = np.array([0.0, 0.0, 0.0])
         self.t0 = np.array([0.0])
 
-        self.q_lower = ca.MX([-1, -np.pi-0.01, -np.pi - 0.01])
-        self.q_upper = ca.MX([1, np.pi+0.01,np.pi + 0.01])
+        self.q_lower = np.array([-1, -np.pi-0.01, -np.pi - 0.01])
+        self.q_upper = np.array([1, np.pi+0.01,np.pi + 0.01])
 
         self.dq_lim = 0.5
         self.ddq_lim = 1.5

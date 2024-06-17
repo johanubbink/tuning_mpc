@@ -26,6 +26,8 @@ env = environment_3dof()
 show_animation = True
 save_animation = True
 show_plot = False
+graph_extension = ".svg"
+tight_layout = False
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 figure_dir = os.path.join(current_dir, "figures")
@@ -101,12 +103,15 @@ def objective_function_a(internal_dynamics):
 
 
     if internal_dynamics:
-        save_path = os.path.join(figure_dir, "objective_a_with_dynamics.pdf")
+        save_path = os.path.join(figure_dir, "objective_a_with_dynamics" + graph_extension)
     else:
-        save_path = os.path.join(figure_dir, "objective_a_perfect.pdf")
+        save_path = os.path.join(figure_dir, "objective_a_perfect" + graph_extension)
 
     plot = plot_error(error_data, t, r"$\mu$")
-    plt.savefig(save_path, bbox_inches='tight', pad_inches=0)
+    if tight_layout:
+        plt.savefig(save_path, bbox_inches='tight', pad_inches=0)
+    else:
+        plt.savefig(save_path)
     if show_plot:
         plt.show()
 
@@ -156,12 +161,15 @@ def objective_function_b(internal_dynamics):
 
 
     if internal_dynamics:
-        save_path = os.path.join(figure_dir, "objective_b_with_dynamics.pdf")
+        save_path = os.path.join(figure_dir, "objective_b_with_dynamics" + graph_extension)
     else:
-        save_path = os.path.join(figure_dir, "objective_b_perfect.pdf")
+        save_path = os.path.join(figure_dir, "objective_b_perfect" + graph_extension)
 
-    plot = plot_error(error_data, t, r"$N$")
-    plt.savefig(save_path, bbox_inches='tight', pad_inches=0)
+    plot = plot_error(error_data, t, r"$N$")   
+    if tight_layout:
+        plt.savefig(save_path, bbox_inches='tight', pad_inches=0)
+    else:
+        plt.savefig(save_path)
     if show_plot:
         plt.show()
 
@@ -223,7 +231,7 @@ def objective_function_c(internal_dynamics, with_constraints):
         title = title + "_with_constraints"
     else:
         title = title + "_no_constraints"
-    save_path = os.path.join(figure_dir, title + ".pdf")
+    save_path = os.path.join(figure_dir, title + graph_extension)
 
     plot = plot_error(error_data, t, r"$N$")
 
@@ -232,7 +240,10 @@ def objective_function_c(internal_dynamics, with_constraints):
     plt.text(1/K + 0.09, 0.37 * item[0, 0] - 0.05,
              r'$[\alpha^{-1}, 0.37 e_0]$', c="black")
     
-    plt.savefig(save_path, bbox_inches='tight', pad_inches=0)
+    if tight_layout:
+        plt.savefig(save_path, bbox_inches='tight', pad_inches=0)
+    else:
+        plt.savefig(save_path)
     if show_plot:
         plt.show()
 
