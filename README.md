@@ -1,4 +1,6 @@
-# Tuning MPC is difficult
+# From Instantaneous to Predictive Control: A More Intuitive and Tunable MPC Formulation for Robot Manipulators
+This repository is intended to accomany the paper "From Instantaneous to Predictive Control: A More Intuitive and Tunable MPC Formulation for Robot Manipulators", submitted to RA-L. In particular, it containts the source code for the motivation example used throughout the paper, as well as some additional animations to better illustrate the main points.
+
 We consider solving the following optimal control problem (OCP) at every control interval of the model predictive controller (MPC):
 $$
         \begin{align*} 
