@@ -1,6 +1,8 @@
 # From Instantaneous to Predictive Control: A More Intuitive and Tunable MPC Formulation for Robot Manipulators
 This repository is intended to accomany the paper "From Instantaneous to Predictive Control: A More Intuitive and Tunable MPC Formulation for Robot Manipulators", submitted to RA-L. In particular, it containts the source code for the motivation example used throughout the paper, as well as some additional animations to better illustrate the main points.
 
+## Motivating example
+
 We consider solving the following optimal control problem (OCP) at every control interval of the model predictive controller (MPC):
 $$
         \begin{align*} 
@@ -135,19 +137,33 @@ Previously it was shown that using objective function C, the same closed-loop pe
 
 ## Installation
 
-Install fatrop with spectool 
-- Instructions are available [here](https://github.com/meco-group/fatrop/blob/main/compilation_instructions.md)
-- This involves 
-    - (1) Creating a virtual environment
-    - (2) Install Casadi from source
-    - (3) Install Fatrop with Spectool 
-    
-Install this package with
-```
-pip install -e .
-```
 
+### Option 1 : Devcontainer and Docker
+
+- Make use of the provided devcontainer and docker file. To do this, it is nescessary to install vscode, docker and the vscode devcontainer extension. Instructions on getting started with devcontainers are available [here](https://code.visualstudio.com/docs/devcontainers/tutorial).
+- Once vscode and docker is successfully installed, open vscode in the root directory of this project.
+  ```
+  code .
+  ```
+- Visual studio will ask you to open the workspace in a container.  Say YES.  If you don't get the message, you can press "F1" (or ctrl-shift P) and look for "Reopen in Container".  Make sure that you opened the workspace in the directory of the tuning_mpc repository.
+- The first time the Docker image will be created.  This will take some time (download of a base image and compiling the dependencies).  The next time that you start, the container will start in a few seconds.  
+
+
+### Option 2 : Source install
+
+- The MPC controller requires Casadi and Fatrop (with the spectool specification) installed from source. Instructions are available [here](https://github.com/meco-group/fatrop/blob/main/compilation_instructions.md) and involves (1) Creating a virtual environment; (2) Install Casadi from source; (3) Install Fatrop with Spectool.
+- Once casadi and fatrop is installed, install the additional requirements
+  ```
+  pip install -r requirements.txt && pip install -e .
+  ```
+    
 ## Running the code
+
+Running the following command reproduces all the graphs presented in the paper
+```
+python paper_experiments.py
+```
+The resulting figures are stored in the "figures" directory, and the animations in the "animation" directory.
 
 ## Contents
 
