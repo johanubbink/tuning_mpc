@@ -58,7 +58,7 @@ The quantitative results for this experiement can be found below, showing the un
 
 ### Objective function B
 
-$$
+```math
 l^\text{B} (\mathbf{x}_k,\mathbf{u}_k)
 =
 \begin{bmatrix} 
@@ -69,7 +69,7 @@ l^\text{B} (\mathbf{x}_k,\mathbf{u}_k)
     {\mathbf{e}}(\mathbf{x}_k) \\ \dot{\mathbf{e}}(\mathbf{x}_k)
 \end{bmatrix}
 + \mathbf{u}_k^\intercal \mathbf{R} \mathbf{u}_k.
-$$
+```
 
 Objective function B introduces a penalty on the time-derivative of the task error, $\dot{\mathbf{e}}$. The weighting matrices for this objective function are chosen as $\mathbf{Q}^\text{B} = \text{diag}(\mathbf{I}, \lambda \mathbf{I})$ and $\mathbf{R} = \mu \mathbf{I}$, where $\lambda$ adjusts the regularisation of the error velocity. 
 The controller was hand tuned for values of $\mu = 10^{-4}$, $\lambda = 10^{-1}$, and $N=30$ to achieve a stable response with small tracking error. Following this, experiments were performed to evaluate the impact of different horizon lengths.
