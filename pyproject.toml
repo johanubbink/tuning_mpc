@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "A description of my package"
 readme = "README.md"
 authors = [
-    { name="Your Name", email="your.email@example.com" }
+    { name="Johan Ubbink", email="johan.ubbink@gmail.com" }
 ]
 dependencies = [
     # List your package dependencies here
