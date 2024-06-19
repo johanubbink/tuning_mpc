@@ -12,7 +12,6 @@ plt.rcParams["font.family"] = "serif"
 plt.rcParams['font.size'] = 11
 plt.rcParams['xtick.labelsize'] = 10
 plt.rcParams['ytick.labelsize'] = 10
-matplotlib.use('Agg')
 
 # specify parameters
 ts = 0.01

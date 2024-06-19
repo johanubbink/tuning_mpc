@@ -9,7 +9,7 @@ $$
                 \min_{\mathbf{u}, \mathbf{x}} \, \, & 
                 \sum_{k=0}^{N-1} l(\mathbf{x}_k,\mathbf{u}_k) \,\, + V_N(\mathbf{x}_N)
                 \\
-                \text{s.t.} \quad
+                \textrm{s.t.} \quad
                 & \mathbf{x}_{k+1} = \mathbf{f}_d(\mathbf{x}_k, \mathbf{u}_k).
         \end{align*}
 $$
@@ -100,7 +100,7 @@ $$
 
 In fact, this is the same as using objective function B, but with the following weighting matrices:
 $$
-    \mathbf{Q}^\text{B} = 
+    \mathbf{Q}^\textrm{B} = 
     \begin{bmatrix}
     \alpha^2 \mathbf{W}_s & \alpha \mathbf{W}_s \\
     \alpha \mathbf{W}_s^\intercal & \mathbf{W}_s
