@@ -4,7 +4,7 @@ This repository is intended to accomany the paper "From Instantaneous to Predict
 ## Motivating example
 
 We consider solving the following optimal control problem (OCP) at every control interval of the model predictive controller (MPC):
-$$
+```math
         \begin{align*} 
                 \min_{\mathbf{u}, \mathbf{x}} \, \, & 
                 \sum_{k=0}^{N-1} l(\mathbf{x}_k,\mathbf{u}_k) \,\, + V_N(\mathbf{x}_N)
@@ -12,16 +12,16 @@ $$
                 \textrm{s.t.} \quad
                 & \mathbf{x}_{k+1} = \mathbf{f}_d(\mathbf{x}_k, \mathbf{u}_k).
         \end{align*}
-$$
+```
 To motivate the challenge of tuning the MPC controller, we compare three different objective functions. For all three objective functions, the terminal cost $V_N$ is set to zero, and the stage cost $l(\mathbf{x}_k,\mathbf{u}_k)$ is modified.
 
 ### Objective function A
 
-$$
+```math
 l^\text{A} (\mathbf{x}_k,\mathbf{u}_k)
 =
 \mathbf{e}(\mathbf{x}_k)^\intercal \mathbf{Q} \mathbf{e}(\mathbf{x}_k) + \mathbf{u}_k^\intercal \mathbf{R} \mathbf{u}_k.
-$$
+```
 
 For this objective function, the weighting matrices are chosen as $\mathbf{Q} = \mathbf{I}$ and $\mathbf{R} = \mu \mathbf{I}$, where $\mathbf{I}$ is an identity matrix and $\mu$ adjusts the level of regularisation. The resulting closed-loop performance for a horizon length of $N = 50$ and different values of $\mu$ is visualised below:
 
