@@ -99,14 +99,14 @@ l^\text{c}(\mathbf{x}_k,\mathbf{u}_k) = {\boldsymbol{\varepsilon}}(\mathbf{x}_k,
 $$
 
 In fact, this is the same as using objective function B, but with the following weighting matrices:
-$$
+```math
     \mathbf{Q}^\textrm{B} = 
     \begin{bmatrix}
     \alpha^2 \mathbf{W}_s & \alpha \mathbf{W}_s \\
     \alpha \mathbf{W}_s^\intercal & \mathbf{W}_s
     \end{bmatrix}, \quad
     \mathbf{R} = \mu \mathbf{W}_r.
-$$
+```
 Therefore, this approach can simply be viewed as a way of choosing $\mathbf{Q}^\text{b}$ and $\mathbf{R}$ with a specific structure. As can be seen in the experiments below, this objective function appears to be invariant with respect to the horizon length, and also gives good performance even with a very short horizon.
 
 <div align="center">
