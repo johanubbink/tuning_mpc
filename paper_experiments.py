@@ -55,7 +55,7 @@ def plot_error(error_data, t, legend_title):
 def objective_function_a(internal_dynamics):
     from decay_mpc.controllers import vanilla_mpc_controller
 
-    N = 50
+    N = 40
     mu = 1e-4
 
     # create a controller
