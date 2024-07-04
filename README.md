@@ -27,8 +27,8 @@ For this objective function, the weighting matrices are chosen as $\mathbf{Q} = 
 
 <div align="center">
     <img src="readme_figures/objective_a_mu_-2_perfect.gif" width="40%">
-    <img src="readme_figures/objective_a_mu_-3_perfect.gif" width="40%">
-    <img src="readme_figures/objective_a_mu_-4_perfect.gif" width="40%">
+    <!-- <img src="readme_figures/objective_a_mu_-3_perfect.gif" width="40%"> -->
+    <!-- <img src="readme_figures/objective_a_mu_-4_perfect.gif" width="40%"> -->
     <img src="readme_figures/objective_a_mu_-5_perfect.gif" width="40%">
 </div>
 
@@ -45,8 +45,8 @@ Introducing the actuator dynamics causes the very fast response ($\mu = 10^{-5}$
 
 <div align="center">
     <img src="readme_figures/objective_a_mu_-2_with_dynamics.gif" width="40%">
-    <img src="readme_figures/objective_a_mu_-3_with_dynamics.gif" width="40%">
-    <img src="readme_figures/objective_a_mu_-4_with_dynamics.gif" width="40%">
+    <!-- <img src="readme_figures/objective_a_mu_-3_with_dynamics.gif" width="40%"> -->
+    <!-- <img src="readme_figures/objective_a_mu_-4_with_dynamics.gif" width="40%"> -->
     <img src="readme_figures/objective_a_mu_-5_with_dynamics.gif" width="40%">
 </div>
 
@@ -76,8 +76,8 @@ The controller was hand tuned for values of $\mu = 10^{-4}$, $\lambda = 10^{-1}$
 
 <div align="center">
     <img src="readme_figures/objective_b_N_2_with_dynamics.gif" width="40%">
-    <img src="readme_figures/objective_b_N_10_with_dynamics.gif" width="40%">
-    <img src="readme_figures/objective_b_N_30_with_dynamics.gif" width="40%">
+    <!-- <img src="readme_figures/objective_b_N_10_with_dynamics.gif" width="40%"> -->
+    <!-- <img src="readme_figures/objective_b_N_30_with_dynamics.gif" width="40%"> -->
     <img src="readme_figures/objective_b_N_100_with_dynamics.gif" width="40%">
 </div>
 
@@ -111,8 +111,8 @@ Therefore, this approach can simply be viewed as a way of choosing $\mathbf{Q}^\
 
 <div align="center">
     <img src="readme_figures/objective_c_N_2_with_dynamics.gif" width="40%">
-    <img src="readme_figures/objective_c_N_10_with_dynamics.gif" width="40%">
-    <img src="readme_figures/objective_c_N_30_with_dynamics.gif" width="40%">
+    <!-- <img src="readme_figures/objective_c_N_10_with_dynamics.gif" width="40%"> -->
+    <!-- <img src="readme_figures/objective_c_N_30_with_dynamics.gif" width="40%"> -->
     <img src="readme_figures/objective_c_N_100_with_dynamics.gif" width="40%">
 </div>
 
@@ -126,8 +126,8 @@ Previously it was shown that using objective function C, the same closed-loop pe
 
 <div align="center">
     <img src="readme_figures/objective_c_N_2_with_dynamics_with_constraints.gif" width="40%">
-    <img src="readme_figures/objective_c_N_10_with_dynamics_with_constraints.gif" width="40%">
-    <img src="readme_figures/objective_c_N_30_with_dynamics_with_constraints.gif" width="40%">
+    <!-- <img src="readme_figures/objective_c_N_10_with_dynamics_with_constraints.gif" width="40%"> -->
+    <!-- <img src="readme_figures/objective_c_N_30_with_dynamics_with_constraints.gif" width="40%"> -->
     <img src="readme_figures/objective_c_N_100_with_dynamics_with_constraints.gif" width="40%">
 </div>
 
@@ -164,9 +164,3 @@ Running the following command reproduces all the graphs presented in the paper
 python paper_experiments.py
 ```
 The resulting figures are stored in the "figures" directory, and the animations in the "animation" directory.
-
-## Contents
-
-### Controllers
-
-### Environments

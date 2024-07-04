@@ -25,7 +25,7 @@ env = environment_3dof()
 show_animation = True
 save_animation = True
 show_plot = False
-graph_extension = ".svg"
+graph_extension = ".pdf"
 tight_layout = False
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -175,7 +175,7 @@ def objective_function_b(internal_dynamics):
 
 
 def objective_function_c(internal_dynamics, with_constraints):
-    from decay_mpc.controllers import decay_based_mpc
+    from decay_mpc.controllers import decay_based_mpc_2
     N = 40
     mu = 1e-5
     K = 2
@@ -187,7 +187,7 @@ def objective_function_c(internal_dynamics, with_constraints):
     env = environment_3dof(constraints=with_constraints)
 
     for N in [100, 30, 10, 2]:
-        controller = decay_based_mpc.generate_controller(
+        controller = decay_based_mpc_2.generate_controller(
             ts, N, env, K=K, mu=mu, with_constraints=with_constraints)
 
         simulated_data = perform_sim(
