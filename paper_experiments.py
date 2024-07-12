@@ -24,8 +24,11 @@ env = environment_3dof()
 
 show_animation = True
 save_animation = True
+# animation_extention = ".mp4"
+animation_extention = ".gif"
 show_plot = False
-graph_extension = ".pdf"
+graph_extension = ".svg"
+# graph_extension = ".pdf"
 tight_layout = False
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -84,7 +87,9 @@ def objective_function_a(internal_dynamics):
         p2_data[mu_str] = to_numpy(simulated_data["p2"])
 
         ani = env.animate(simulated_data["q"].to_list()[::5], t[::5],
-                          0.01*5*1000, "mu=" + str(mu) + ", N= " + str(N))
+                        #   0.01*5*1000, r"$\mu=$" + mu_str + r", $N=$ " + str(N))
+                          0.01*5*1000, r"$\mu=$" + mu_str )
+
 
         if show_animation:
             plt.show()
@@ -94,7 +99,7 @@ def objective_function_a(internal_dynamics):
                 title = title + "_with_dynamics"
             else:
                 title = title + "_perfect"
-            save_path = os.path.join(animation_dir, title + ".gif")
+            save_path = os.path.join(animation_dir, title + animation_extention)
             ani.save(save_path, writer="ffmpeg")
         
         plt.close("all")
@@ -119,7 +124,10 @@ def objective_function_a(internal_dynamics):
 def objective_function_b(internal_dynamics):
     from decay_mpc.controllers import vanilla_mpc_controller
     N = 40
-    mu = 1e-4
+    power = -4
+    mu = 10**power
+
+    mu_str = r'$10^{{{:.0f}}}$'.format(power)
 
     # create a controller
     error_data = {}
@@ -142,7 +150,7 @@ def objective_function_b(internal_dynamics):
 
 
         ani = env.animate(simulated_data["q"].to_list()[::5], t[::5],
-                          0.01*5*1000, "mu=" + str(mu) + ", N= " + str(N))
+                          0.01*5*1000,  r"$N=$ " + str(N))
 
         if show_animation:
             plt.show()
@@ -152,7 +160,7 @@ def objective_function_b(internal_dynamics):
                 title = title + "_with_dynamics"
             else:
                 title = title + "_perfect"
-            save_path = os.path.join(animation_dir, title + ".gif")
+            save_path = os.path.join(animation_dir, title + animation_extention)
             ani.save(save_path, writer="ffmpeg")
 
         plt.close("all")
@@ -177,8 +185,12 @@ def objective_function_b(internal_dynamics):
 def objective_function_c(internal_dynamics, with_constraints):
     from decay_mpc.controllers import decay_based_mpc_2
     N = 40
-    mu = 1e-5
+    power = -5
+    mu = 10**power
     K = 2
+
+    mu_str = r'$10^{{{:.0f}}}$'.format(power)
+
 
     # create a controller
     error_data = {}
@@ -201,7 +213,7 @@ def objective_function_c(internal_dynamics, with_constraints):
 
         
         ani = env.animate(simulated_data["q"].to_list()[::5], t[::5],
-                        0.01*5*1000, "mu=" + str(mu) + ", N= " + str(N))
+                        0.01*5*1000,  r"$N=$ " + str(N))
         
         if show_animation:
             plt.show()
@@ -213,7 +225,7 @@ def objective_function_c(internal_dynamics, with_constraints):
                 title = title + "_perfect"
             if with_constraints:
                 title = title + "_with_constraints"
-            save_path = os.path.join(animation_dir, title + ".gif")
+            save_path = os.path.join(animation_dir, title + animation_extention)
             ani.save(save_path, writer="ffmpeg")
         
         plt.close("all")
