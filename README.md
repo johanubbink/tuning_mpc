@@ -92,7 +92,7 @@ Clearly, the performance significantly depends on the horizon length. More speci
 The purpose of this objective function is to achieve a closed-loop performance that is less dependant on the horizon length. In particular, it is desireable that the performance should be good even for a short horizon length. This can be achieved by penalising the deviation of the error from a first-order response, as opposed to penalising the error directly.
 
 $$
-\boldsymbol{\varepsilon}(\mathbf{x},\mathbf{u}) = \dot{\mathbf{e}}(\mathbf{x}, \mathbf{u}) + \alpha \mathbf{e}(\mathbf{x}) 
+\boldsymbol{\varepsilon}(\mathbf{x},\mathbf{u}) = \dot{\mathbf{e}}(\mathbf{x}, \mathbf{u}) + \mathbf{K}_e \mathbf{e}(\mathbf{x}) 
 $$
 $$
 l^\text{c}(\mathbf{x}_k,\mathbf{u}_k) = {\boldsymbol{\varepsilon}}(\mathbf{x}_k, \mathbf{u}_k)^\intercal \mathbf{W}_s {\boldsymbol{\varepsilon}}(\mathbf{x}_k, \mathbf{u}_k) + \mu \mathbf{u}_k^\intercal \mathbf{W}_r \mathbf{u}_k.
@@ -102,8 +102,8 @@ In fact, this is the same as using objective function B, but with the following 
 ```math
     \mathbf{Q}^\textrm{B} = 
     \begin{bmatrix}
-    \alpha^2 \mathbf{W}_s & \alpha \mathbf{W}_s \\
-    \alpha \mathbf{W}_s^\intercal & \mathbf{W}_s
+    \mathbf{K}_e^\intercal \mathbf{W}_s \mathbf{K}_e & \mathbf{K}_e^\intercal \mathbf{W}_s \\
+    \mathbf{W}_s \mathbf{K}_e & \mathbf{W}_s
     \end{bmatrix}, \quad
     \mathbf{R} = \mu \mathbf{W}_r.
 ```
