@@ -1,6 +1,8 @@
 # From Instantaneous to Predictive Control: A More Intuitive and Tunable MPC Formulation for Robot Manipulators
 This repository is intended to accomany the paper "From Instantaneous to Predictive Control: A More Intuitive and Tunable MPC Formulation for Robot Manipulators", submitted to RA-L. In particular, it containts the source code for the motivation example used throughout the paper, as well as some additional animations to better illustrate the main points.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/do_SWGdcBRU?si=F-tC8rco2LtgcR62" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## Motivating example
 
 We consider solving the following optimal control problem (OCP) at every control interval of the model predictive controller (MPC):
