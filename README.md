@@ -1,7 +1,8 @@
 # From Instantaneous to Predictive Control: A More Intuitive and Tunable MPC Formulation for Robot Manipulators
 This repository is intended to accomany the paper "From Instantaneous to Predictive Control: A More Intuitive and Tunable MPC Formulation for Robot Manipulators", submitted to RA-L. In particular, it containts the source code for the motivation example used throughout the paper, as well as some additional animations to better illustrate the main points.
 
-[![YouTube](http://i.ytimg.com/vi/do_SWGdcBRU/hqdefault.jpg)](https://www.youtube.com/watch?v=do_SWGdcBRU)
+<!-- [![YouTube](http://i.ytimg.com/vi/do_SWGdcBRU/hqdefault.jpg)](https://www.youtube.com/watch?v=do_SWGdcBRU) -->
+[![Youtube video](https://img.youtube.com/vi/do_SWGdcBRU/0.jpg)](https://www.youtube.com/watch?v=do_SWGdcBRU)
 
 ## Motivating example
 
