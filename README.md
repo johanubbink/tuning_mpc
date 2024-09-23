@@ -4,6 +4,7 @@ This repository is intended to accomany the paper "From Instantaneous to Predict
 
 <!-- [![YouTube](http://i.ytimg.com/vi/do_SWGdcBRU/hqdefault.jpg)](https://www.youtube.com/watch?v=do_SWGdcBRU) -->
 An accompanying video is available here:
+
 [![Youtube video](https://img.youtube.com/vi/do_SWGdcBRU/0.jpg)](https://www.youtube.com/watch?v=do_SWGdcBRU)
 
 ## Motivating example
